@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SolOil | صفحة التسوق</title>
+  <meta
+    name="description"
+    content="تسوق منتجات SolOil الطبيعية: زيوت، عناية بالبشرة، عناية بالشعر، ومنتجات عشبية."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="shop">
+  <div class="site-bg"></div>
+
+  <header class="header" id="siteHeader">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="SolOil">
+        <img src="logo.png" alt="SolOil Logo" class="logo" />
+        <div class="brand-text">
+          <strong>SolOil</strong>
+          <span>الطبيعة في كل قطرة</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" data-nav="home">الرئيسية</a>
+        <a href="shop.html" data-nav="shop">التسوق</a>
+        <a href="index.html#features">لماذا نحن</a>
+        <a href="index.html#about">من نحن</a>
+        <a href="index.html#contact">تواصل معنا</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn mobile-toggle" id="mobileToggle" aria-label="فتح القائمة">
+          ☰
+        </button>
+        <button class="icon-btn theme-toggle" id="themeToggle" aria-label="تبديل الوضع">
+             🌙
+        </button>
+        <button class="cart-button" id="cartButton" aria-label="فتح سلة المشتريات">
+          <span>🛒</span>
+          <span>السلة</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">الرئيسية</a>
+      <a href="shop.html">التسوق</a>
+      <a href="index.html#features">لماذا نحن</a>
+      <a href="index.html#about">من نحن</a>
+      <a href="index.html#contact">تواصل معنا</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero section-sm">
+      <div class="container">
+        <span class="section-label">صفحة التسوق</span>
+        <h1>اكتشف منتجاتنا الطبيعية</h1>
+        <p>اختر المنتج المناسب لك من تشكيلة مرتبة، مع بحث وفلترة وسلة شراء سهلة.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="shop-toolbar">
+          <input
+            type="text"
+            id="searchInput"
+            class="form-input"
+            placeholder="ابحث عن منتج..."
+            aria-label="البحث عن منتج"
+          />
+
+          <select id="categoryFilter" class="form-input" aria-label="تصفية حسب الفئة">
+            <option value="all">كل الفئات</option>
+            <option value="زيوت">زيوت</option>
+            <option value="عناية بالبشرة">عناية بالبشرة</option>
+            <option value="عناية بالشعر">عناية بالشعر</option>
+            <option value="منتجات عشبية">منتجات عشبية</option>
+          </select>
+        </div>
+
+        <div class="product-grid" id="shopProducts"></div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="cart-sidebar" id="cartSidebar" aria-hidden="true">
+    <div class="cart-top">
+      <h3>سلة المشتريات</h3>
+      <button class="icon-btn close-cart" id="closeCart" aria-label="إغلاق السلة">✕</button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+      <p class="empty-message">السلة فارغة حاليًا</p>
+    </div>
+
+    <div class="cart-bottom">
+      <div class="summary-row">
+        <span>الإجمالي</span>
+        <strong id="cartTotal">0.00 $</strong>
+      </div>
+      <button class="btn btn-primary full-width" id="checkoutBtn">إتمام الطلب</button>
+    </div>
+  </aside>
+
+  <div class="overlay" id="overlay"></div>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>SolOil</h3>
+        <p>متجر طبيعي أنيق بتجربة تسوق مريحة ومظهر احترافي.</p>
+      </div>
+
+      <div>
+        <h4>روابط مهمة</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="shop.html">التسوق</a></li>
+          <li><a href="index.html#about">من نحن</a></li>
+          <li><a href="index.html#contact">تواصل معنا</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>تابعنا</h4>
+        <div class="social-links">
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">TikTok</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 SolOil - جميع الحقوق محفوظة</p>
+    </div>
+  </footer>
+
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
